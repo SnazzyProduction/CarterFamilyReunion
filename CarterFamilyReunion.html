@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carter Family Reunion 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Carter Family Reunion 2026</h1>
+    <nav>
+      <ul>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#itinerary">Itinerary</a></li>
+        <li><a href="#payments">Payments</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Intro -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Meridian, Mississippi • July 23–26, 2026</h2>
+        <p>Come celebrate our family, our history, and our future together.</p>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+   <section id="gallery" class="section">
+  <h2>Photo Gallery</h2>
+  <img src="/images/Fence1.jpg" alt="Family Photo 1" class="gallery-image" />
+  <p>Visit the full gallery to view photos from past reunions.</p>
+  <a class="button" href="gallery.html">View Photo Gallery</a>
+</section>
+
+     
+
+    <!-- Itinerary -->
+    <section id="itinerary" class="section">
+      <h2>Itinerary</h2>
+
+      <div class="day">
+        <h3>Day 1 – Thursday, July 23</h3>
+        <h4>Arrival & Welcome</h4>
+        <ul>
+          <li><strong>3:00 PM:</strong> Hotel Check-in & registration</li>
+          <li><strong>7:00 PM-Until:</strong> Welcome & meet-and-greet in Suite</li>
+        </ul>
+      </div>
+
+      <div class="day">
+        <h3>Day 2 – Friday, July 24</h3>
+        <h4>Family Banquet</h4>
+        <ul>
+          <li><strong>7:00 AM-5:00 PM:</strong> Personal/Family time</li>
+          <li><strong>6:00 PM-9:00 PM:</strong> Family Banquet</li>
+          <li><strong>Location:</strong> Temple Theatre Ballroom (2320 8th St, Meridian, MS 39301)</li>
+          <li><strong>Attire:</strong> Business Semi-Formal</li>
+          <li><strong>Menu:</strong> Southern Style Buffet with options for dietary restrictions</li>
+          <li><strong>Entertainment:</strong> DJ:Herman Peters, Photo Booth, and slideshow presentation</li>
+          <li><strong>Special Activities:</strong> Awards, and recognition ceremony</li>
+          <li><strong>9:00 PM-Until:</strong> Socialize in Suite and with family/Personal Time</li>
+        </ul>
+      </div>
+
+      <div class="day">
+        <h3>Day 3 – Saturday, July 25</h3>
+        <h4>Family Picnic</h4>
+        <ul>
+          <li><strong>8:30 AM-9:00 AM:</strong> Bus Loading</li>
+          <li><strong>10:00 AM-3:00 PM:</strong> Family Picnic</li>
+          <li><strong>Location:</strong> Tribulation Baptist Church (616 County Road 216 Shubuta, MS 39360)</li>
+          <li><strong>Attire:</strong> Casual/Comfortable & Family Shirt</li>
+          <li><strong>Menu:</strong> Southern Barbecue with options for dietary restrictions</li>
+          <li><strong>Activities:</strong> Games, Socializing with family, and group photos</li>
+          <li><strong>3:00 PM:</strong> Transportation back to hotel</li>
+          <li><strong>5:00 PM-Until:</strong> Family/Personal Time</li>
+        </ul>
+      </div>
+
+      <div class="day">
+        <h3>Day 4 – Sunday, July 26</h3>
+        <h4>Family Worship</h4>
+        <ul>
+          <li><strong>9:00 AM-10:00 AM:</strong> Worship & Farewell Brunch</li>
+          <li><strong>Location:</strong> The Deuse Venue (806 HWY 19 North Unit 320 Meridian MS 39307)</li>
+          <li><strong>Menu:</strong> Assorted Breakfast items with options for dietary restrictions</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Activities -->
+      <section id="activities" class="section">
+      <h2>Activities & Entertainment</h2>
+
+      <div class="activities">
+        <h3>Throughout the reunion, enjoy a variety of activities including:</h3>
+        <ul>
+          <li>Meridian Children’s museum</li>
+          <li>Meridian Art Museum</li>
+          <li>The Max</li>
+          <li>Bonita Lakes Park</li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      </section>
+
+
+    <!-- Payments -->
+    <section id="payments" class="section">
+      <h2>Event Payments</h2>
+      <p>
+        Reunion fee: <strong>$170 per family of four</strong>, <strong>$50 per additional person</strong>.  
+        Use the form below to submit your payment details.
+      </p>
+
+      <!-- NOTE: This is a front-end-only demo form.
+           To accept real payments, you’d connect this to a backend or a service like Stripe/PayPal. -->
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="adults">Number of Adults</label>
+          <input id="adults" name="adults" type="number" min="0" value="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="children">Number of Children</label>
+          <input id="children" name="children" type="number" min="0" value="0" required />
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Total Amount (USD)</label>
+          <input id="amount" name="amount" type="number" min="0" step="0.01" required />
+        </div>
+
+        <div class="form-group">
+          <label for="payment-method">Payment Method</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="">Select one</option>
+            <option value="cashapp">Cash App</option>
+            <option value="paypal">PayPal</option>
+            <option value="zelle">Zelle</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <button type="submit">Submit Payment Info</button>
+        <p class="form-note">
+          After submitting, you’ll see instructions for sending your payment via the method you selected.
+        </p>
+      </form>
+
+      <div id="payment-message" class="hidden"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact & Questions</h2>
+      <p>
+        For questions about the reunion, travel, or payments, please contact:
+      </p>
+      <p>
+        <strong>Reunion Coordinator:</strong> Cassandra Shope & Sharon Cameron<br />
+        <strong>Email:</strong> <a href="mailto:reunion@example.com">reunion@example.com</a><br />
+        <strong>Phone:</strong> (555) 123-4567
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Carter Family Reunion</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
