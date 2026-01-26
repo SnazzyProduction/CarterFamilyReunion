@@ -44,12 +44,63 @@ paymentForm.addEventListener("submit", e => {
 // Dynamic Carousel Setup
 // ---------------------------
 
-// Add your images + captions here
-const galleryImages = [
-  { src: "images/Fence1.jpg", caption: "Family BBQ 2023" },
-  { src: "images/Fence2.jpg", caption: "Cousins at the park" },
-  { src: "images/Fence3.jpg", caption: "Group photo at the reunion" },
-  { src: "images/Fence4.jpg", caption: "Kids playing games" },
-  { src: "images/Fence5.jpg", caption: "Evening bonfire memories" }
+// ...existing code...
+// ---------------------------
+// Full Gallery Logic
+// ---------------------------
+
+// Load default images
+let galleryImages = [
+  { src: "images/IMG_4041.jpg", caption: "Family BBQ 2023" },
+  { src: "images/IMG_4046.jpg", caption: "Cousins at the park" },
+  { src: "images/IMG_4036.jpg", caption: "Group photo at the reunion" },
+  { src: "images/IMG_4048.jpg", caption: "Kids playing games" },
+  { src: "images/photo5.jpg", caption: "Evening bonfire memories" }
 ];
+
+// Load uploaded images from localStorage
+const stored = JSON.parse(localStorage.getItem("uploadedPhotos")) || [];
+galleryImages = [...galleryImages, ...stored];
+
+let index = 0;
+
+// DOM elements
+const carouselImage = document.getElementById("carouselImage");
+const caption = document.getElementById("caption");
+const thumbnailContainer = document.getElementById("thumbnailContainer");
+
+// Render carousel
+function showImage(i) {
+  carouselImage.src = galleryImages[i].src;
+  caption.textContent = galleryImages[i].caption || "Family Photo";
+}
+showImage(index);
+
+// Buttons
+document.querySelector(".next")?.addEventListener("click", () => {
+  index = (index + 1) % galleryImages.length;
+  showImage(index);
+});
+
+document.querySelector(".prev")?.addEventListener("click", () => {
+  index = (index - 1 + galleryImages.length) % galleryImages.length;
+  showImage(index);
+});
+
+// Thumbnails
+function renderThumbnails() {
+  thumbnailContainer.innerHTML = "";
+  galleryImages.forEach((img, i) => {
+    const thumb = document.createElement("img");
+    thumb.src = img.src;
+    thumb.className = "thumb";
+    thumb.onclick = () => {
+      index = i;
+      showImage(i);
+    };
+    thumbnailContainer.appendChild(thumb);
+  });
+}
+renderThumbnails();
+
 });
